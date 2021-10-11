@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  fastapi:
+    build: .
+    container_name: "sandbox"
+    environment: 
+      - PORT=8000
+    ports: 
+      - "80:8000"
+    volumes: 
+      - ./app:/app
